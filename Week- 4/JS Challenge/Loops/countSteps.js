@@ -1,4 +1,4 @@
-function countBoxes(targetSteps) {
+function countSteps(targetSteps) {
     let totalsteps = 0;
     while(totalsteps < targetSteps){
       totalsteps++
@@ -7,5 +7,5 @@ function countBoxes(targetSteps) {
     }
 
 
-    let result = countBoxes(50)
+    let result = countSteps(50)
     console.log(result);
