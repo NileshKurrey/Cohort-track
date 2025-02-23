@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Calculator</title>
+   
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="script.js"></script>
+</head>
+<body class="bg-gray-900 flex items-center justify-center min-h-screen">
+    <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+        <div class="text-right mb-4">
+            <input type="text" id="display" class="w-full bg-gray-900 text-white text-4xl p-2 rounded transition duration-300 ease-in-out transform focus:outline-none focus:ring-2 focus:ring-blue-500" readonly>
+        </div>
+        <div class="grid grid-cols-4 gap-4">
+            <button class="bg-gray-700 text-white text-2xl p-4 rounded hover:bg-gray-600 operand" >7</button>
+            <button class="bg-gray-700 text-white text-2xl p-4 rounded hover:bg-gray-600 operand" >8</button>
+            <button class="bg-gray-700 text-white text-2xl p-4 rounded hover:bg-gray-600 operand" >9</button>
+            <button id="clear" class="bg-red-500 text-white text-2xl p-4 rounded hover:bg-red-400">C</button>
+            <button class="bg-gray-700 text-white text-2xl p-4 rounded hover:bg-gray-600 operand" >4</button>
+            <button class="bg-gray-700 text-white text-2xl p-4 rounded hover:bg-gray-600 operand" >5</button>
+            <button class="bg-gray-700 text-white text-2xl p-4 rounded hover:bg-gray-600 operand" >6</button>
+            <button class="bg-blue-500 text-white text-2xl p-4 rounded hover:bg-blue-400 operator" >+</button>
+            <button class="bg-gray-700 text-white text-2xl p-4 rounded hover:bg-gray-600 operand" >1</button>
+            <button class="bg-gray-700 text-white text-2xl p-4 rounded hover:bg-gray-600 operand" >2</button>
+            <button class="bg-gray-700 text-white text-2xl p-4 rounded hover:bg-gray-600 operand" >3</button>
+            <button class="bg-blue-500 text-white text-2xl p-4 rounded hover:bg-blue-400 operator" >-</button>
+            <button class="bg-gray-700 text-white text-2xl p-4 rounded hover:bg-gray-600 operand" >0</button>
+            <button class="bg-gray-700 text-white text-2xl p-4 rounded hover:bg-gray-600 operand" >.</button>
+            <button class="bg-blue-500 text-white text-2xl p-4 rounded hover:bg-blue-400 operator">*</button>
+            <button id="calculate" class="bg-green-500 text-white text-2xl p-4 rounded hover:bg-green-400 operator" >=</button>
+        </div>
+ 
+</body>
+</html>
