@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Chai Tube</title>
+    
+</head>
+
+<body>
+    <div class="WholeContainer">
+<!-- UnInteractive SideBar -->
+        <div class="sidebar">
+            <div class="logo">
+                <img class="logoImg" src="./assets/logo.avif" alt="">
+                <span>
+
+                    ChaiTube
+                </span>
+            </div>
+            <div class="sidebarContainer">
+                <div class="sidebarIcons active">
+                    <i class="icons fas fa-home"></i>
+                    <span class="icontext">Home</span>
+                </div>
+                <div class="sidebarIcons">
+                    <i class="icons fas fa-compass"></i>
+                    <span class="icontext">Explore</span>
+                </div>
+                <div class="sidebarIcons">
+                    <i class="icons fas fa-play-circle"></i>
+                    <span class="icontext">Subscriptions</span>
+                </div>
+                <div class="sidebarIcons">
+                    <i class="icons fas fa-folder"></i>
+                    <span class="icontext">Library</span>
+                </div>
+
+
+                <div class="separator"></div>
+
+
+                <div class="sidebarIcons">
+                    <i class="icons fas fa-history"></i>
+                    <span class="icontext">History</span>
+                </div>
+                <div class="sidebarIcons">
+                    <i class="icons fas fa-clock"></i>
+                    <span class="icontext">Watch Later</span>
+                </div>
+                <div class="sidebarIcons">
+                    <i class="icons fas fa-thumbs-up"></i>
+                    <span class="icontext">Liked Videos</span>
+                </div>
+
+                <div class="separator"></div>
+
+                <div class="sidebarIcons">
+                    <i class="icons fas fa-cog"></i>
+                    <span class="icontext">Settings</span>
+                </div>
+                <div class="sidebarIcons">
+                    <i class="icons fas fa-flag"></i>
+                    <span class="icontext">Report</span>
+                </div>
+            </div>
+        </div>
+        <!-- Main Component Starts Hera -->
+        <div class="MainContent">
+            <!-- Search Element -->
+            <div class="searchContainer">
+                <div class="searchElement">
+                    <input type="text" placeholder="Search videos..." id="search" class="search">
+                    <button id="searchBtn" class="searchBtn">
+                        <i class="searchIcon fas fa-magnifying-glass"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- List Container -->
+            <div class="listingsContainer">
+                <div class="listings" id="listings">
+                    <!-- Dynamic Generated Video Card Loads Here -->
+                    <!-- Unique Customized Loader -->
+                    <div class="loader-container" id="loader">
+                        <div class="loader">
+                            <img src="./assets//logo.avif" alt="Loading" class="unique-loader">
+                            <div class="dot-pulse">
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

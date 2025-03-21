@@ -1,0 +1,241 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-green: #2d5a27;
+  --secondary-green: #5d9b4b;
+  --leaf-light: #a3c989;
+  --wood-brown: #6b4f3a;
+  --forest-dark: #1a2f1c;
+  --myContent:'🌿'
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0 auto;
+  padding: 20px;
+  color: var(--forest-dark);
+  overflow-x: hidden;
+}
+
+h1 {
+  color: var(--primary-green);
+  text-align: center;
+  font-size: 2.5em;
+  margin: 20px 0;
+  position: relative;
+}
+
+h1::after {
+  content: "🌿";
+  position: absolute;
+  right: 30%;
+  top: -5px;
+}
+
+h2 {
+    color: var(--secondary-green);
+    text-align: center;
+    font-size: 2em;
+    margin: 20px 0;
+    position: relative;
+  }
+  
+
+.mood-options {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.mood-btn {
+  font-size: 2rem;
+  padding: 15px;
+  border: 2px solid var(--primary-green);
+  border-radius: 15px;
+  cursor: pointer;
+  background: var(--leaf-light);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.mood-btn:hover {
+  transform: translateY(-3px);
+  background: var(--secondary-green);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    margin-top: 20px;
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+
+.day-cell {
+    padding: 15px;
+    border: 1px solid #d4e6d0;
+    text-align: center;
+    min-height: 100px;
+    cursor: pointer;
+    background: #a9d0a2b3;
+    border-radius: 6px;
+    content: var(--myContent);
+    transition: background 0.2s;
+}
+
+.day-cell-before{
+    
+    font-size: 22px;
+    margin-top: 27px;
+    opacity: 0.5;
+    margin-left: 150px;
+    position: absolute;
+}
+.day-cell:hover {
+    background: #e4efe0;
+}
+.timeline {
+    margin-top: 60px;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.log-entry {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+    padding: 12px;
+    background: #f8fbf6;
+    border-radius: 8px;
+    border-left: 5px solid var(--secondary-green);
+}
+
+.date-header {
+    font-weight: bold;
+    margin: 20px 0 10px;
+    color: var(--primary-green);
+    font-size: 1.2em;
+    padding-bottom: 5px;
+    border-bottom: 2px solid var(--leaf-light);
+}
+
+#calendar {
+    background: linear-gradient(145deg, #f8fbf6, #ffffff);
+}
+.week-header {
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  background: var(--leaf-light);
+  border-radius: 4px;
+  margin: 2px;
+}
+
+.day-cell.empty {
+  background: transparent;
+  border: none;
+}
+
+
+/* Custom Alert Styling */
+
+.alert {
+    display: flex;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    width: 320px;
+    overflow: hidden;
+    border-left: 4px solid #4CAF50;
+    animation: slideIn 0.3s ease-out, fadeOut 0.3s ease-out 5.2s;
+    z-index:10;
+    overflow-x: hidden;
+}
+
+/* Alert content layout */
+.alert-content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+/* Icon container */
+.alert-icon {
+    background-color: #4CAF50;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+/* Icon styling */
+.alert-icon i {
+    color: white;
+    font-size: 1.2rem;
+}
+
+/* Message styling */
+.alert-message {
+    color: #333;
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    font-family: p;
+}
+
+/* Progress bar container */
+.progress-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: #e0e0e0;
+}
+
+/* Animated progress bar */
+.progress {
+    height: 100%;
+    background: #4CAF50;
+    width: 100%;
+    animation: progress 5s linear forwards;
+}
+
+/* Animations */
+@keyframes slideIn {
+    from { transform: translateX(100%); }
+    to { transform: translateX(0); }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+@keyframes progress {
+    from { width: 100%; }
+    to { width: 0%; }
+}
